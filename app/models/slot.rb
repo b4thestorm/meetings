@@ -8,6 +8,7 @@
 #  updated_at :datetime         not null
 #  coach_id   :bigint
 #  student_id :bigint
+#  end_time   :datetime
 #
 class Slot < ApplicationRecord
     belongs_to :coach

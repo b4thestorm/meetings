@@ -10,3 +10,4 @@
 coach = Coach.create(name: 'Arnold')
 student = Student.create(name: 'Arnold')
 
+

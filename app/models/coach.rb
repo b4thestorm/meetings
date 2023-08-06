@@ -10,4 +10,6 @@
 class Coach < ApplicationRecord
     has_many :slots, dependent: :destroy
     has_many :students, through: :slots
+    has_one :user, as: :meta, dependent: :destroy
+
 end
