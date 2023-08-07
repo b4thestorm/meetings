@@ -3,13 +3,14 @@ class SlotsController < ApplicationController
     def index
         if params[:coach_id]
             begin
-                @slots = Slots.find(coach_id: coach_id)
+                @slots = Slot.find(coach_id: coach_id)
             rescue RecordNotFound => e
                 puts "no slots available for coach #{e.message()}"
             end
         else
-            @slots = Slots.all()
+            @slots = Slot.all()
         end
+        render json: @slots
     end
 
     def new
